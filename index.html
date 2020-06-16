@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>To International locale</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css" />
+<body>
+  <div id="observablehq-4706ce94">
+    <div class="observablehq-viewof-rawFile"></div>
+    <div class="observablehq-viewof-separator"></div>
+    <div class="observablehq-viewof-decimal"></div>
+    <div class="observablehq-viewof-thousands"></div>
+    <div class="observablehq-viewof-selectedColumns"></div>
+    <div class="observablehq-download"></div>
+  </div>
+  <script type="module">
+    import {
+      Runtime,
+      Inspector,
+    } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@uf0/to-international-locale.js?v=3";
+
+    const runtime = new Runtime();
+    const main = runtime.module(define, (name) => {
+      if (name === "viewof rawFile")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-viewof-rawFile"
+        )();
+      if (name === "viewof separator")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-viewof-separator"
+        )();
+      if (name === "viewof decimal")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-viewof-decimal"
+        )();
+      if (name === "viewof thousands")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-viewof-thousands"
+        )();
+      if (name === "viewof selectedColumns")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-viewof-selectedColumns"
+        )();
+      if (name === "download")
+        return Inspector.into(
+          "#observablehq-4706ce94 .observablehq-download"
+        )();
+    });
+  </script>
+</body>
